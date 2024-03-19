@@ -28,8 +28,8 @@ const MOCK_DATA = [
 ];
 
 const loadMock = (delegates, tableBody) => {
-  delegates = [...delegates, ...MOCK_DATA];
-  for (let data of MOCK_DATA) {
+  delegates.push(...MOCK_DATA);
+  for (let data of delegates) {
     const row = document.createElement('tr');
     renderRow(data, row);
     tableBody.appendChild(row);

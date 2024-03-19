@@ -40,6 +40,8 @@ const addEventListeners = (delegates, tableBody) => {
     delegate.fullName = `${delegate.firstName} ${delegate.lastName}`;
 
     delegates.push(delegate);
+
+    console.log(delegates);
     renderRow(delegate, row);
     tableBody.appendChild(row);
     form.reset();
