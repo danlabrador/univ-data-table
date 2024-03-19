@@ -11,6 +11,11 @@ const renderRow = (student, row) => {
   for (let field in student) {
     const cell = document.createElement('td');
 
+    // Skip the fullName field
+    if (field === 'fullName') {
+      continue;
+    }
+
     // If the field is either firstName or lastName, add the value to the fullNameArr array
     if (field === 'firstName' || field === 'lastName') {
       fullNameArr.push(student[field]);

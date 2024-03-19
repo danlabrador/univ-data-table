@@ -87,7 +87,6 @@ const handleSubmit = () => {
     tableBody.appendChild(row);
     form.reset();
   });
-
 }
 const handleFilter = () => {
   const filterBox = document.getElementById('filter');

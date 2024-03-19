@@ -6,26 +6,29 @@ const MOCK_DATA = [
     lastName: 'Doe',
     gender: 'Male',
     age: 18,
-    position: 'Student'
+    position: 'Student',
+    fullName: 'John Doe'
   },
   {
     firstName: 'Jane',
     lastName: 'Smith',
     gender: 'Female',
     age: 19,
-    position: 'Student'
+    position: 'Student',
+    fullName: 'Jane Smith'
   },
   {
     firstName: 'Michael',
     lastName: 'Johnson',
     gender: 'Male',
     age: 35,
-    position: 'Teacher'
+    position: 'Teacher',
+    fullName: 'Michael Johnson'
   },
 ];
 
-const loadMock = () => {
-  const tableBody = document.getElementById('table-body');
+const loadMock = (delegates, tableBody) => {
+  delegates = [...delegates, ...MOCK_DATA];
   for (let data of MOCK_DATA) {
     const row = document.createElement('tr');
     renderRow(data, row);
