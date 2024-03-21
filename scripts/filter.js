@@ -36,6 +36,13 @@ const addFilterFunction = (delegates, tableBody) => {
     console.log(input)
     filterTable(delegates, input, tableBody)
   }
+
+  // Adds event listener to the clear button
+  document.getElementById('clear-btn').addEventListener('click', (event) => {
+    event.preventDefault();
+    document.forms[1].reset();
+    handleUpdate(delegates, tableBody);
+  })
 }
 
 export default addFilterFunction;
