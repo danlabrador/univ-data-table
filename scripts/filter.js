@@ -1,3 +1,13 @@
+/**
+ * Handles the filter functionality of the table
+ * @module scripts/filter
+ * 
+ * @param {Array} delegates - The array of delegate objects to be filtered.
+ * @param {HTMLTableSectionElement} tableBody - The table body element to append the rows to.
+ * @param {HTMLInputElement} input - The input element to add event listeners to.
+ * @param {HTMLFormElement} form - The form element to add an event listener to.
+ */
+
 import renderRow from './renderRow.js';
 
 // Updates the table based on the filter inputs
@@ -32,8 +42,8 @@ const filterTable = (delegates, input, tableBody) => {
 
 // Adds event listeners to all the filter inputs
 const addFilterFunction = (delegates, tableBody) => {
+  // Adds event listeners to all the filter inputs
   for (let input of document.forms[1]) {
-    console.log(input)
     filterTable(delegates, input, tableBody)
   }
 

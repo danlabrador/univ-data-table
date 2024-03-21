@@ -1,6 +1,11 @@
 /**
  * Creates a new delegate object, adds it to the delegates array,
  * and renders a new row in the table.
+ * 
+ * @module scripts/addEventListeners
+ * 
+ * @param {Array} delegates - The array of delegate objects to be filtered.
+ * @param {HTMLTableSectionElement} tableBody - The table body element to append the rows to.
  */
 
 import renderRow from './renderRow.js';
@@ -41,7 +46,6 @@ const addEventListeners = (delegates, tableBody) => {
 
     delegates.push(delegate);
 
-    console.log(delegates);
     renderRow(delegate, row);
     tableBody.appendChild(row);
     form.reset();

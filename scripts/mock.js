@@ -1,3 +1,14 @@
+/**
+ * This file is used to load mock data into the table.
+ * 
+ * @module scripts/mock
+ * @requires scripts/renderRow
+ * 
+ * @param {Array} delegates - The array of delegate objects to be filtered.
+ * @param {HTMLTableSectionElement} tableBody - The table body element to append the rows to.
+ * 
+ */
+
 import renderRow from './renderRow.js';
 
 const MOCK_DATA = [
@@ -25,6 +36,22 @@ const MOCK_DATA = [
     position: 'Teacher',
     fullName: 'Michael Johnson'
   },
+  {
+    firstName: 'Sarah',
+    lastName: 'Williams',
+    gender: 'Female',
+    age: 28,
+    position: 'Teacher',
+    fullName: 'Sarah Williams'
+  },
+  {
+    firstName: 'David',
+    lastName: 'Brown',
+    gender: 'Male',
+    age: 42,
+    position: 'Teacher',
+    fullName: 'David Brown'
+  }
 ];
 
 const loadMock = (delegates, tableBody) => {
